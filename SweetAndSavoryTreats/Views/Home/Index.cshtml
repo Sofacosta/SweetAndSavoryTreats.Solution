@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+@using SweetAndSavoryTreats.Models
+@model List<SweetAndSavoryTreats.Models.Treat>
+
+<h1> Sweet and Savory Treats</h1>
+
+<hr>
+<input type="button" class="btn btn-outline-primary" value="All flavors" onclick="location.href='@Url.Action("Index", "Flavors")'">
+<input type="button" class="btn btn-outline-primary" value="All treats" onclick="location.href='@Url.Action("Index", "Treats")'">
+@* <input type="button" class="btn btn-outline-primary" value="Account management" onclick="location.href='@Url.Action("Index", "Account")'"> *@
+<hr>
