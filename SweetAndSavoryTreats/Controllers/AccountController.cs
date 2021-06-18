@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
-using SweetAndSavoryTreats.Models;
 using System.Threading.Tasks;
+using SweetAndSavoryTreats.Models;
 using SweetAndSavoryTreats.ViewModels;
 
 namespace SweetAndSavoryTreats.Controllers

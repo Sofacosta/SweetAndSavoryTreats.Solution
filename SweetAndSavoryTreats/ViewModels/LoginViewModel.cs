@@ -1,4 +1,4 @@
-namespace SweetAndSavorytreats.ViewModels
+namespace SweetAndSavoryTreats.ViewModels
 {
   public class LoginViewModel
   {
