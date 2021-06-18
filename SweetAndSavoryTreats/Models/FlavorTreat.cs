@@ -1,4 +1,4 @@
-namespace SweetAndSavory.Models
+namespace SweetAndSavoryTreats.Models
 {
   public class FlavorTreat
   {

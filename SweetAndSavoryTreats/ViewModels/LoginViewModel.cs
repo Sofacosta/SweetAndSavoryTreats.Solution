@@ -1,8 +1,8 @@
-// namespace SweetAndSavorytreats.ViewModels
-// {
-//   public class LoginViewModel
-//   {
-//     public string Email { get; set; }
-//     public string Password { get; set; }
-//   }
-// }
+namespace SweetAndSavorytreats.ViewModels
+{
+  public class LoginViewModel
+  {
+    public string Email { get; set; }
+    public string Password { get; set; }
+  }
+}

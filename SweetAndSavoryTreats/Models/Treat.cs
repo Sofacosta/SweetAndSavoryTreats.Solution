@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace SweetAndSavory.Models
+namespace SweetAndSavoryTreats.Models
 {
   public class Treat
   {

@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@model SweetAndSavoryTreats.Models.Treat
+
+<h2>Edit @Html.DisplayFor(model => model.Name)</h2>
+
+<hr>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.TreatId)
+
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new { required="required", autocomplete="off"})
+
+  <input type="submit" value="Save" class="btn btn-outline-success">
+}
+
+<input type="button" class="btn btn-outline-primary" value="Back to details" onclick="location.href='@Url.Action("Details", new { id = Model.TreatId })'">

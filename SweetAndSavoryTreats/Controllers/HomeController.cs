@@ -9,17 +9,11 @@ namespace SweetAndSavoryTreats.Controllers
 {
   public class HomeController : Controller
   {
-    private readonly SweetAndSavoryTreats _db;
+    [HttpGet("/")]
+      public ActionResult Index()
+      {
+        return View();
+      }
 
-    public HomeController(SweetAndSavoryTreats db)
-    {
-      _db = db;
     }
-
-    public ActionResult Index()
-    {
-      List<Treat> model = _db.Treats.ToList();
-      return View(model);
-    }
-  }
 }

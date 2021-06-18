@@ -1,0 +1,36 @@
+@{
+  Layout = "_Layout";
+}
+
+@using SweetAndSavoryTreats.Models
+@model SweetAndSavoryTreats.Models.Flavor
+
+<h1>Flavor - @Html.DisplayFor(model => model.Name)</h1>
+
+<hr>
+<input type="button" class="btn btn-outline-success" value="Add treats that have this flavor" onclick="location.href='@Url.Action("AddTreat", new { id = Model.FlavorId })'">
+<input type="button" class="btn btn-outline-warning" value="Edit flavor" onclick="location.href='@Url.Action("Edit", new { id = Model.FlavorId })'">
+<input type="button" class="btn btn-outline-danger" value="Delete flavor" onclick="location.href='@Url.Action("Delete", new { id = Model.FlavorId })'">
+<input type="button" class="btn btn-outline-primary" value="Back to list of flavors" onclick="location.href='@Url.Action("Index")'">
+<input type="button" class="btn btn-outline-primary" value="Home" onclick="location.href='@Url.Action("Index", "Home")'">
+<hr>
+
+@if(@Model.JoinEntities.Count == 0)
+{
+  <p>There are no treats with the flavor of @Html.DisplayFor(model => model.Name).</p>
+}
+else
+{
+  <h3>@Html.DisplayFor(model => model.Name) is found in:</h3>
+  <ul>
+  @foreach(FlavorTreat join in Model.JoinEntities)
+  {
+    <li><h4>@Html.ActionLink($"{join.Treat.Name}", "Details", "Treats", new { id = join.Treat.TreatId })</h4></li>
+    @using (Html.BeginForm("DeleteTreat", "Flavors"))
+    {
+      @Html.Hidden("joinId", @join.FlavorTreatId)
+      <input type="submit" class="btn btn-outline-danger btn-sm" value="Remove treat">
+    }
+  }
+  </ul>
+}

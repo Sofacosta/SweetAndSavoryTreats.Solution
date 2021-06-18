@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@using System.Security.Claims
+
+<h2>Authentication with Identity</h2>
+
+<hr>
+
+@if (User.Identity.IsAuthenticated)
+{
+  @using (Html.BeginForm("LogOff", "Account"))
+  {
+    <input type="button" class="btn btn-outline-primary" value="Home" onclick="location.href='@Url.Action("Index", "Home")'">
+    <input type="submit" class="btn btn-outline-primary" value="Log out">
+  }
+  <hr>
+  <p>Hello @User.Identity.Name!</p>
+}
+else
+{
+  <input type="button" class="btn btn-outline-primary" value="Home" onclick="location.href='@Url.Action("Index", "Home")'">
+  <input type="button" class="btn btn-outline-primary" value="Register" onclick="location.href='@Url.Action("Register")'">
+  <input type="button" class="btn btn-outline-primary" value="Log in" onclick="location.href='@Url.Action("Login")'">
+  <hr>
+}

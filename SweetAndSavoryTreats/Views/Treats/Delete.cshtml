@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+
+@model SweetAndSavoryTreats.Models.Treat
+
+<h2>Are you sure you want to remove this treat - @Html.DisplayFor(model => model.Name)?</h2>
+
+@using (Html.BeginForm())
+{
+  <input type="submit" value="Delete" class="btn btn-outline-danger">
+}
+<input type="button" class="btn btn-outline-primary" value="Back to details" onclick="location.href='@Url.Action("Details", new { id = Model.TreatId })'">

@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@using SweetAndSavoryTreats.ViewModels
+
+@model LoginViewModel
+
+<h2>Log in with your account</h2>
+
+<hr>
+<input type="button" class="btn btn-outline-primary"  value="Home" onclick="location.href='@Url.Action("Index", "Home")'">
+<hr>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(m => m.Email)
+  @Html.TextBoxFor(m => m.Email)
+
+  @Html.LabelFor(m => m.Password)
+  @Html.PasswordFor(m => m.Password)
+
+  <input type="submit" value="Log in" class="btn btn-outline-primary">
+}
