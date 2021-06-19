@@ -1,4 +1,7 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc;
 using SweetAndSavoryTreats.Models;
 using System.Collections.Generic;
@@ -6,11 +9,12 @@ using System.Linq;
 
 namespace SweetAndSavoryTreats.Controllers
 {
-  public class CategoriesController : Controller
+  
+  public class FlavorsController : Controller
   {
     private readonly SweetAndSavoryTreatsContext _db;
 
-    public CategoriesController(SweetAndSavoryTreatsContext db)
+    public FlavorsController(SweetAndSavoryTreatsContext db)
     {
       _db = db;
     }
