@@ -126,10 +126,7 @@ Create a connection string to connect the database to the web application
 
 ## Notes and Resources
 
-- [HTML button callinng an MVC Controller and Action method](https://stackoverflow.com/questions/2503923/html-button-calling-an-mvc-controller-and-action-method)
-
-- [Form buttons](https://getbootstrap.com/docs/4.0/components/buttons/)
-- [How to get MySQL Workbench Database Dump](https://hevodata.com/learn/mysql-workbench-database-dump/)
+N/A
 
 ## Support and Contact Details
 
